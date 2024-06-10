@@ -27,6 +27,7 @@ import VideoDetails from './components/core/Dashboard/StudentPages/VideoDetails.
 import ViewCourse from './Pages/ViewCourse.jsx'
 import Cart from './Pages/Cart.jsx'
 import MyCourses from "./components/core/Dashboard/InstructorPages/MyCourses.jsx"
+ 
 
 function App() {
   const user = useSelector((state) => state.profile);

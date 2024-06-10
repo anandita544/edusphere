@@ -1,4 +1,4 @@
-const { findByIdAndDelete } = require("../models/Category");
+const { findByIdAndDelete } = require("../models/category");
 const Section = require("../models/section");
 const SubSection = require("../models/subSection");
 const { uploadImageToCloudinary } = require("../utils/imageUploader");
