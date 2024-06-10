@@ -11,7 +11,7 @@ function ContactUs() {
         {
             icon : <HiChatBubbleLeftRight className='w-[24px] h-[24px]'/>,
             heading : "Chat on us",
-            subheading : <p>Our friendly team is here to help.<br/><a href='mailto:s.kirandeep999@gmail.com'>@s.kirandeep999@gmail.com</a></p>
+            subheading : <p>Our friendly team is here to help.<br/><a href='mailto:ananditasingh544@gmail.com'>ananditasingh544@gmail.com</a></p>
         },
         {
             icon : <GiEarthAmerica className='w-[24px] h-[24px]'/>,
