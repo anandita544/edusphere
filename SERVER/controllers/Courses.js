@@ -1,7 +1,7 @@
 const Course = require("../models/Course");
 const Section = require("../models/section.js");
 const SubSection = require("../models/subSection");
-const Category = require("../models/Category");
+const Category = require("../models/Category.js");
 const User = require("../models/User");
 const { uploadImageToCloudinary } = require("../utils/imageUploader");
 const { default: mongoose } = require("mongoose");
