@@ -1,14 +1,43 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-const {createCourse,updateCourse, getAllCourses, getCourseDetails, getInstructorCourses, deleteCourse, getFullCourseDetails} = require("../controllers/Courses");
-const {createCategory, showAllCategories, categoryPageDetails} = require("../controllers/Categories");
-const {addSection, updateSection, deleteSection} = require("../controllers/Sections");
-const {createSubSection, updateSubSection, deleteSubSection} = require("../controllers/SubSection");
-const {createRating, getAverageRating, getAllRatings} = require("../controllers/RatingAndReview");
+const {
+  createCourse,
+  updateCourse,
+  getAllCourses,
+  getCourseDetails,
+  getInstructorCourses,
+  deleteCourse,
+  getFullCourseDetails,
+} = require("../controllers/Courses");
+const {
+  createCategory,
+  showAllCategories,
+  categoryPageDetails,
+} = require("../controllers/categories");
+const {
+  addSection,
+  updateSection,
+  deleteSection,
+} = require("../controllers/Sections");
+const {
+  createSubSection,
+  updateSubSection,
+  deleteSubSection,
+} = require("../controllers/subSection");
+const {
+  createRating,
+  getAverageRating,
+  getAllRatings,
+} = require("../controllers/RatingAndReview");
 
-const {auth, isStudent, isAdmin, isInstructor} = require("../middlewares/auth");
-const { updateCourseProgress } = require('../controllers/CourseProgress');
+const {
+  auth,
+  isStudent,
+  isAdmin,
+  isInstructor,
+} = require("../middlewares/auth");
+const { updateCourseProgress } = require("../controllers/CourseProgress");
 
 // ************************************************************************************************************************************************************************
 //                                                              ALL COURSE RELATED ROUTES
@@ -25,15 +54,18 @@ router.delete("/deleteCourse", auth, isInstructor, deleteCourse);
 router.get("/getAllCourses", getAllCourses);
 
 // GET INSTRUCTOR COURSES ROUTE
-router.get("/getAllInstructorCourses",auth, isInstructor, getInstructorCourses);
+router.get(
+  "/getAllInstructorCourses",
+  auth,
+  isInstructor,
+  getInstructorCourses
+);
 
 // GET ANY COURSE
 router.post("/getCourseDetails", getCourseDetails);
 
 // GET FULL COURSE DETAILS AUTHENTICATED API
-router.post("/getFullCourseDetails", auth, getFullCourseDetails)
-
-
+router.post("/getFullCourseDetails", auth, getFullCourseDetails);
 
 // ************************************************************************************************************************************************************************
 //                                                              ALL SECTION RELATED ROUTES
@@ -48,9 +80,6 @@ router.put("/updateSection", auth, isInstructor, updateSection);
 // DELETE SECTION
 router.put("/deleteSection", auth, isInstructor, deleteSection);
 
-
-
-
 // ************************************************************************************************************************************************************************
 //                                                              ALL SUBSECTION RELATED ROUTES
 // ************************************************************************************************************************************************************************
@@ -64,14 +93,12 @@ router.put("/updateSubSection", auth, isInstructor, updateSubSection);
 // DELETE SUBSECTION
 router.put("/deleteSubSection", auth, isInstructor, deleteSubSection);
 
-
-
 // ************************************************************************************************************************************************************************
 //                                                              ALL CATEGORY RELATED ROUTES
 // ************************************************************************************************************************************************************************
 
 // CREATE CATEGORY ROUTE CAN ONLY BE DONE BY ADMIN
-router.post('/createCategory', auth, isAdmin, createCategory);
+router.post("/createCategory", auth, isAdmin, createCategory);
 
 // SHOW ALL CATEGORIES ROUTE
 router.get("/showAllCategories", showAllCategories);
@@ -79,15 +106,12 @@ router.get("/showAllCategories", showAllCategories);
 // GET CATEGORY PAGE DETAILS
 router.post("/categoryPageDetails", categoryPageDetails);
 
-
-
-
 // ************************************************************************************************************************************************************************
 //                                                              ALL RATING RELATED ROUTES
 // ************************************************************************************************************************************************************************
 
 // CREATE RATING
-router.post('/createRating', auth, isStudent, createRating);
+router.post("/createRating", auth, isStudent, createRating);
 
 // GET AVG RATING
 router.get("/getAvgRating", getAverageRating);
@@ -95,11 +119,10 @@ router.get("/getAvgRating", getAverageRating);
 // GET ALL RATINGS
 router.get("/getAllRatings", getAllRatings);
 
-
 // ************************************************************************************************************************************************************************
 //                                                              COURSE PROGRESS RELATED ROUTES
 // ************************************************************************************************************************************************************************
 
-router.post("/updateCourseProgress", auth, isStudent, updateCourseProgress)
+router.post("/updateCourseProgress", auth, isStudent, updateCourseProgress);
 
 module.exports = router;
