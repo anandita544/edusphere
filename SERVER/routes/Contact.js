@@ -1,7 +1,7 @@
-const express = require("express")
-const { contactUsController } = require("../controllers/ContactUs")
-const router = express.Router()
+const express = require("express");
+const { contactUsController } = require("../controllers/contactUs");
+const router = express.Router();
 
-router.post("/contact", contactUsController)
+router.post("/contact", contactUsController);
 
-module.exports = router
+module.exports = router;
