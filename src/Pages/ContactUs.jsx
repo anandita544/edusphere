@@ -11,17 +11,17 @@ function ContactUs() {
         {
             icon : <HiChatBubbleLeftRight className='w-[24px] h-[24px]'/>,
             heading : "Chat on us",
-            subheading : <p>Our friendly team is here to help.<br/><a href='mailto:ananditasingh544@gmail.com'>ananditasingh544@gmail.com</a></p>
+            subheading : <p>Our friendly team is here to help.<br/><a href='mailto:ananditasingh544@gmail.com'>abrolmannat08@gmail.com</a></p>
         },
         {
             icon : <GiEarthAmerica className='w-[24px] h-[24px]'/>,
             heading : "Visit us",
-            subheading : <p>Come and say hello at our office HQ.<br/>HNO 28A Radhakunj Bhopal, Madhya Pradesh, PIN: 462022</p>
+            subheading : <p>Come and say hello at our office HQ.<br/>YCET JAMMU</p>
         },
         {
             icon : <BsFillTelephoneFill className='w-[24px] h-[24px]'/>,
             heading : "Chat on us",
-            subheading : <p>Mon - Fri From 8AM to 5PM<br/><a href='tel:7049761589'>+91 - 70497 61589</a></p>
+            subheading : <p>Mon - Fri From 9AM to 6PM<br/><a href='#'>+91 - 78897 80899</a></p>
         },
     ]
   return (
