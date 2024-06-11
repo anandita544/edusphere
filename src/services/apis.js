@@ -1,4 +1,5 @@
 const BASE_URL = "https://edusphere-9.onrender.com/api/v1";
+// const BASE_URL = process.env.REACT_APP_API_URL;
 
 console.log(BASE_URL);
 

@@ -4,7 +4,7 @@ const mailSender = require("../utils/mailSender");
 exports.contactUsController = async (req, res) => {
   const { email, firstName, lastName, message, phoneNumber, countryCode } =
     req.body;
-  // console.log(req.body)
+  console.log(req.body);
   try {
     const emailRes = await mailSender(
       email,
@@ -18,7 +18,7 @@ exports.contactUsController = async (req, res) => {
         countryCode
       )
     );
-    // console.log("EMAIL RES", emailRes)
+    console.log("EMAIL RES", emailRes);
     return res.json({
       success: true,
       message: "Email Sent Successfully",
