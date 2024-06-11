@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "react-scripts start",
-    "build": "vite build",
+    "build": "react scripts build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "server": "cd server && npm run dev",
